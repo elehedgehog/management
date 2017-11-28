@@ -1,0 +1,58 @@
+/*公共样式*/
+/*1.清除你不要的样式*/
+*,
+::before,
+::after{
+    padding: 0;
+    margin: 0;
+    /*清除移动端特有的点击高亮效果*/
+    -webkit-tap-highlight-color: transparent;
+}
+ul,ol{
+    list-style: none;
+}
+input{
+    /*当文本框成为当前激活对象的时候，周围会有一个淡淡的彩色边框*/
+    outline: none;
+    border: none;
+    -webkit-appearance: none; /*去除系统默认的样式*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* 点击高亮的颜色*/
+}
+// select {
+//     appearance:none;
+//     -moz-appearance:none;
+//     -webkit-appearance:none;  
+//  }
+
+
+/*2.设置所有元素公共样式*/
+html,body{
+    width:100%;
+}
+
+body{
+    color: #333;
+    font-size: 14px;
+}
+a{
+    color: #666;
+    text-decoration: none;
+}
+a:hover{
+    color: #666;
+    text-decoration: none;
+}
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.clearfix::before,
+.clearfix::after{
+    content: "";
+    clear: both;
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+}
